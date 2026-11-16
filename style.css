@@ -1,0 +1,54 @@
+:root {
+  --fond: #f7f6f2;
+  --texte: #1d2327;
+  --doux: #5b6670;
+  --carte: #ffffff;
+  --bord: #e2e0d8;
+  --accent: #2f6f8f;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fond: #121619;
+    --texte: #e8eaec;
+    --doux: #9aa5ae;
+    --carte: #1b2125;
+    --bord: #2a3238;
+    --accent: #7fb8d4;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--fond);
+  color: var(--texte);
+  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+.page { max-width: 760px; margin: 0 auto; padding: 48px 20px 32px; }
+header .logo { font-weight: 700; font-size: 20px; letter-spacing: -0.01em; color: var(--texte); text-decoration: none; }
+header .logo span { color: var(--accent); }
+.hero { margin: 56px 0 40px; }
+.hero h1 { font-size: 34px; line-height: 1.2; margin: 0 0 12px; letter-spacing: -0.02em; }
+.hero p { color: var(--doux); margin: 0; max-width: 34em; }
+h2 { font-size: 15px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--doux); margin: 40px 0 16px; }
+.app {
+  display: flex; gap: 18px; align-items: flex-start;
+  background: var(--carte); border: 1px solid var(--bord); border-radius: 16px;
+  padding: 18px; text-decoration: none; color: inherit;
+}
+.app + .app { margin-top: 12px; }
+.app:hover { border-color: var(--accent); }
+.icone {
+  flex: none; width: 64px; height: 64px; border-radius: 15px;
+  background: linear-gradient(160deg, #8fc3dc 0%, #2f6f8f 100%);
+  display: grid; place-items: end center; overflow: hidden;
+}
+.icone svg { width: 64px; height: 40px; }
+.app h3 { margin: 0; font-size: 18px; }
+.app p { margin: 2px 0 0; color: var(--doux); font-size: 15px; }
+.badge { display: inline-block; font-size: 12px; padding: 1px 8px; border-radius: 99px; border: 1px solid var(--bord); color: var(--doux); margin-left: 6px; vertical-align: 2px; }
+.texte h1 { font-size: 30px; margin: 40px 0 8px; }
+.texte h2 { text-transform: none; letter-spacing: 0; font-size: 20px; color: var(--texte); margin: 32px 0 8px; }
+.texte p, .texte li { color: var(--texte); }
+a { color: var(--accent); }
+footer { margin-top: 64px; padding-top: 20px; border-top: 1px solid var(--bord); color: var(--doux); font-size: 14px; display: flex; flex-wrap: wrap; gap: 8px 20px; }
+footer a { color: var(--doux); }
