@@ -52,3 +52,45 @@ h2 { font-size: 15px; text-transform: uppercase; letter-spacing: 0.08em; color: 
 a { color: var(--accent); }
 footer { margin-top: 64px; padding-top: 20px; border-top: 1px solid var(--bord); color: var(--doux); font-size: 14px; display: flex; flex-wrap: wrap; gap: 8px 20px; }
 footer a { color: var(--doux); }
+
+/* Pages produits : icône, note « en cours », images, modèle 3D */
+.icone img { width: 64px; height: 64px; display: block; }
+.icone.photo { background: none; }
+.icone.appareil { background: linear-gradient(160deg, #f3efe6 0%, #d9d2c3 100%); place-items: center; }
+.icone.appareil img { width: 60px; height: 60px; object-fit: contain; }
+.entete { display: flex; align-items: center; gap: 16px; margin: 40px 0 8px; }
+.entete img { width: 72px; height: 72px; border-radius: 17px; flex: none; }
+.entete h1 { margin: 0; }
+.intro { font-size: 18px; }
+.en-cours {
+  background: var(--carte); border: 1px solid var(--bord); border-left: 4px solid #c8642b;
+  border-radius: 10px; padding: 12px 16px; font-size: 15px;
+}
+.vitrine { display: grid; grid-template-columns: 220px 1fr; gap: 28px; align-items: start; margin: 24px 0; }
+.vitrine .ecran { width: 100%; height: auto; border-radius: 26px; border: 6px solid #1d2327; display: block; }
+.vitrine ul { margin: 0; padding-left: 20px; }
+.vitrine li + li { margin-top: 8px; }
+.galerie { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 12px 0 0; }
+.galerie figure { margin: 0; }
+.galerie img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 10px; display: block; border: 1px solid var(--bord); }
+.galerie figcaption, .modele figcaption { font-size: 14px; color: var(--doux); margin-top: 6px; }
+.modele { margin: 20px 0 0; }
+.modele model-viewer {
+  width: 100%; height: 420px; display: block;
+  background: radial-gradient(circle at 50% 40%, var(--carte) 0%, var(--fond) 75%);
+  border: 1px solid var(--bord); border-radius: 16px;
+  --poster-color: transparent;
+}
+.bouton-ar {
+  position: absolute; left: 50%; bottom: 16px; transform: translateX(-50%);
+  background: var(--accent); color: #fff; border: 0; border-radius: 99px;
+  padding: 10px 20px; font: 600 15px/1 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  cursor: pointer;
+}
+@media (prefers-color-scheme: dark) { .bouton-ar { color: #121619; } }
+@media (max-width: 560px) {
+  .hero h1 { font-size: 28px; }
+  .vitrine { grid-template-columns: 1fr; }
+  .vitrine .ecran { max-width: 220px; margin: 0 auto; }
+  .modele model-viewer { height: 340px; }
+}

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Appareils de table — Sommer Labs</title>
+  <meta name="description" content="Les appareils de table de Sommer Labs : de petits objets électroniques avec de l'intelligence artificielle, posés sur la table, sans téléphone.">
+  <link rel="stylesheet" href="../style.css">
+  <script type="module" src="../assets/model-viewer.min.js"></script>
+</head>
+<body>
+  <div class="page texte">
+    <header><a class="logo" href="../">Sommer<span>Labs</span></a></header>
+
+    <h1>Appareils de table</h1>
+    <p class="intro">De petits appareils électroniques qu'on pose sur la table, avec un peu d'intelligence artificielle dedans. Pas de téléphone à sortir, pas d'écran à regarder.</p>
+
+    <p class="en-cours"><strong>En cours.</strong> Le premier appareil est un prototype en développement. Le modèle 3D ci-dessous est une maquette de travail ; une version améliorée suivra dans les prochains jours.</p>
+
+    <h2>Le premier : pour manger plus lentement</h2>
+    <p>Manger trop vite, c'est une habitude difficile à voir soi-même. Ce petit appareil se pose à côté de l'assiette et aide à garder un rythme calme pendant le repas, avec un petit visage lumineux plutôt qu'une application.</p>
+
+    <figure class="modele">
+      <model-viewer
+        src="modeles/appareil.glb"
+        ios-src="modeles/appareil.usdz"
+        alt="Maquette 3D de l'appareil de table : un petit boîtier clair aux coins arrondis, un visage en lumières vertes sur une face sombre, un bouton orange sur le dessus"
+        camera-controls
+        auto-rotate
+        auto-rotate-delay="1500"
+        rotation-per-second="18deg"
+        camera-orbit="25deg 72deg 110%"
+        shadow-intensity="1"
+        shadow-softness="0.8"
+        exposure="1.05"
+        environment-image="neutral"
+        ar
+        ar-modes="quick-look webxr scene-viewer"
+        ar-scale="fixed"
+        ar-placement="floor"
+        interaction-prompt="none">
+        <button slot="ar-button" class="bouton-ar">Voir sur ma table</button>
+      </model-viewer>
+      <figcaption>Faites-le tourner du doigt ou à la souris. Sur iPhone ou iPad, touchez <strong>Voir sur ma table</strong> : l'appareil se pose en taille réelle (environ 9 cm de large) sur la table devant vous.</figcaption>
+    </figure>
+
+    <h2>Comment il marche</h2>
+    <ul>
+      <li>On appuie sur le bouton du dessus pour commencer le repas.</li>
+      <li>Une petite caméra et un modèle d'intelligence artificielle suivent le rythme des bouchées. Le calcul est prévu dans l'appareil lui-même : rien n'est envoyé sur internet.</li>
+      <li>Le visage lumineux montre le rythme, sans son et sans reproche.</li>
+      <li>Sur batterie, sans fil et sans téléphone.</li>
+    </ul>
+
+    <h2>Suivre le projet</h2>
+    <p>Une question, une envie d'essayer le prototype ? Écrivez à <a href="mailto:contact@sommerlabs.ch">contact@sommerlabs.ch</a>.</p>
+
+    <footer>
+      <span>© 2026 Sommer Labs · Nicolas Sommer, entreprise individuelle, Berne</span>
+      <a href="../">Accueil</a>
+      <a href="mailto:contact@sommerlabs.ch">Contact</a>
+    </footer>
+  </div>
+</body>
+</html>
